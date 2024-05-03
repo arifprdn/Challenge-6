@@ -1,3 +1,5 @@
+URL : https://expressjs-development-6d9a.up.railway.app/
+
 ENDPOINT 
 
 1. upload gambar
