@@ -3,7 +3,7 @@ var logger = require('morgan');
 let dotenv = require('dotenv').config()
 var app = express();
 var bodyParser = require('body-parser')
-const { showPic, showPicById } = require('../Challenge 6/controllers/media.controllers')
+const { showPic, showPicById } = require('./controllers/media.controllers')
 app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.json())
