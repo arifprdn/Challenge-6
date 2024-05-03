@@ -2,13 +2,25 @@
 <html lang="en">
 
 <head>
-    <title>Upload Image</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictures</title>
 </head>
 
 <body>
-    <h1>Uploaded Image</h1>
-
-    <img src="<%= image_url %>" alt="Italian Trulli">
+    <h1>Pustaka Gambar</h1>
+    <ul>
+        <% pictures.forEach(picture=> { %>
+            <li>
+                <h3>
+                    id: <%= picture.id %> <br>
+                        title : <%= picture.title %> <br>
+                            description : <%= picture.description %>
+                </h3>
+                <img src="<%= picture.image_url %>" alt="<%= picture.title %>">
+            </li>
+            <% }) %>
+    </ul>
 </body>
 
 </html>

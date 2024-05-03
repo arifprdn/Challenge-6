@@ -3,7 +3,7 @@ var logger = require('morgan');
 let dotenv = require('dotenv').config()
 var app = express();
 var bodyParser = require('body-parser')
-
+const { showPic, showPicById } = require('../Challenge 6/controllers/media.controllers')
 app.use(logger('dev'));
 app.use(express.json());
 app.use(bodyParser.json())
@@ -15,7 +15,8 @@ app.set('view engine', 'ejs');
 
 const routes = require('./routes');
 app.use('/api/v1', routes);
-app.get('/', (req, res) => res.render('image'));
+app.get('/', showPic);
+app.get('/:id', showPicById)
 
 // 500 error handler
 app.use((err, req, res, next) => {

@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-    <title>Upload Image</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictures</title>
 </head>
 
 <body>
-    <h1>Upload Image</h1>
-
-    <form action="/api/v1/upload/image" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="email">Image File :</label>
-            <br />
-            <input type="file" name="image">
-        </div>
-        <br />
-        <button type="submit">Upload Now</button>
-    </form>
+    <h1>Pustaka Gambar</h1>
+    <ul>
+        <h3>
+            id: <%= picture.id %> <br>
+                title : <%= picture.title %> <br>
+                    description : <%= picture.description %>
+        </h3>
+        <img src="<%= picture.image_url %>" alt="<%= picture.title %>">
+    </ul>
 </body>
 
 </html>
